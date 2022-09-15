@@ -1,6 +1,6 @@
 import Button from '../../components/Buttons';
 import {useNavigate} from 'react-router-dom';
-
+import isla from '../../assets/isla.jpg';
 
 function Home(){
     const navigate = useNavigate();
@@ -8,7 +8,13 @@ function Home(){
         navigate('/game');
     }
     return(
-        <Button onClick={onClickButton} text='MerCamp Quiz'/>
+        <selection className='hero is-medium is-fullheight' style={{backgroundImage: `url(${isla})`, backgroundSize: "cover"}}>
+            <div className='hero-body'> 
+                <div className='container has-text-centered'> 
+                    <Button onClick={onClickButton} text='MerCamp Quiz'/>
+                </div>
+            </div>
+        </selection>
     )
 }
 export default Home;
